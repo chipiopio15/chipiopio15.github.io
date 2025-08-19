@@ -2756,3 +2756,63 @@ body.modal-open {
   #work .portfolio-card img{ width: 100%; max-width: none; }
   #work .portfolio-slider{ margin-bottom: 3.5rem; }
 }
+
+/* --------- COMPETENCIES (#one) --------- */
+
+/* contenitore più stretto */
+#one.main.style2 > .content{
+  max-width: 1100px;     /* prima riempiva tutto */
+}
+
+/* griglia e card più compatte */
+#one .competenze-grid{
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1rem;
+}
+#one .competenza-card{
+  border-radius: 28px;          /* meno “tondone” */
+  padding: 1.2rem 1.4rem;       /* meno imbottitura */
+}
+#one .competenza-card i{ font-size: 2.2rem; }
+#one .competenza-card h3{ font-size: 1.1rem; line-height: 1.2; }
+#one .competenza-card p{ font-size: 1.05rem; line-height: 1.45; }
+
+@media (max-width: 736px){
+  #one .competenze-grid{ grid-template-columns: 1fr; }
+}
+
+/* --------- PROJECTS (#work) --------- */
+
+/* freccia bianca (data URI, così non servono file extra) */
+#work .button.style2.down{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23FFFFFF' d='M32 48L16 32h10V16h12v16h10L32 48z'/%3E%3C/svg%3E") !important;
+  border-color: rgba(255,255,255,.85);
+}
+
+/* più spazio tra slider e freccia in basso */
+#work .portfolio-slider{ margin-bottom: 4.5rem; }
+#work.main.style3{ padding-bottom: 6.5rem; }
+
+/* immagine card più piccola e non tagliata */
+#work .portfolio-card img{
+  width: 34%;
+  max-width: 360px;
+  height: 260px;              /* altezza controllata */
+  object-fit: contain;        /* mostra tutta l’immagine */
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+}
+
+/* --------- ABOUT (#two) --------- */
+
+/* più spazio per non far toccare la freccia al testo */
+#two.main.style2{ padding-bottom: 7rem; }
+#two .button.down.anchored{ bottom: 1.2rem; }
+
+/* immagine profilo dimensionata bene */
+#two .about-image img{
+  max-width: 360px;
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
