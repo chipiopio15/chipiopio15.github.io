@@ -16,7 +16,7 @@
           integrity="sha512-dNr5x0sGf4bm/FYnGV8eK3opgDdGztqKqRR3YKHy+XapnwYfJOLLm1Aun1vDLzA94ppIqh+apMI2Qxb38n0jQw=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- CSS (cartella /css del repo) -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css?v=2" />
     <noscript><link rel="stylesheet" href="css/noscript.css?v=2" /></noscript>
   </head>
@@ -145,8 +145,8 @@
         <section id="about" class="about">
           <div class="about-content">
             <div class="about-image fade-in visible">
-              <!-- spazio nel nome codificato -->
-              <img src="images/foto%20profilo.jpeg" alt="Michel Marinaro">
+              <!-- usa nome file senza spazi -->
+              <img src="images/foto-profilo.jpeg" alt="Michel Marinaro">
             </div>
 
             <div class="about-text fade-in visible">
@@ -174,7 +174,7 @@
           <p>Interested in working together or learning more about my projects?Let’s connect.</p>
         </header>
 
-        <!-- Right column: info / map / socials -->
+        <!-- Right column: info / socials -->
         <div class="box contact-info">
           <h3>Contact Info</h3>
           <p>Email: michel.marinaro@gmail.com</p>
@@ -214,8 +214,10 @@
       </ul>
     </footer>
 
-    <!-- Scripts (cartella /js del repo) -->
-    <script src="js/jquery.min.js"></script>
+    <!-- Scripts: jQuery da CDN con fallback locale + plugin -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
     <script src="js/jquery.poptrox.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/jquery.scrollex.min.js"></script>
